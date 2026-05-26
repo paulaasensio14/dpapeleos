@@ -51,6 +51,16 @@
 		transform: translateY(0);
 	}
 
+	a:focus-visible,
+	button:focus-visible,
+	input:focus-visible,
+	select:focus-visible,
+	textarea:focus-visible {
+		outline: 3px solid rgba(27, 96, 155, 0.28);
+		outline-offset: 4px;
+		border-radius: 12px;
+	}
+
 	.container {
 		width: min(1120px, calc(100% - 32px));
 		margin: 0 auto;
@@ -1012,7 +1022,6 @@
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-	outline: 3px solid rgba(27, 96, 155, 0.16);
 	border-color: var(--color-secondary);
 }
 
