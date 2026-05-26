@@ -7,6 +7,16 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+
+const isActivePath = (path: string) => {
+	if (path === "/") {
+		return currentPath === "/";
+	}
+
+	return currentPath.startsWith(path);
+};
 ---
 
 <!doctype html>
@@ -32,11 +42,41 @@ const { title, description } = Astro.props;
 				</a>
 
 				<nav class="main-nav" aria-label="Navegación principal">
-					<a href="/">Inicio</a>
-					<a href="/servicios">Servicios</a>
-					<a href="/inmobiliaria">Inmobiliaria</a>
-					<a href="/sobre-nosotros">Sobre nosotros</a>
-					<a href="/contacto">Contacto</a>
+					<a
+						href="/"
+						class:list={{ "is-active": isActivePath("/") }}
+						aria-current={isActivePath("/") ? "page" : undefined}
+					>
+						Inicio
+					</a>
+					<a
+						href="/servicios"
+						class:list={{ "is-active": isActivePath("/servicios") }}
+						aria-current={isActivePath("/servicios") ? "page" : undefined}
+					>
+						Servicios
+					</a>
+					<a
+						href="/inmobiliaria"
+						class:list={{ "is-active": isActivePath("/inmobiliaria") }}
+						aria-current={isActivePath("/inmobiliaria") ? "page" : undefined}
+					>
+						Inmobiliaria
+					</a>
+					<a
+						href="/sobre-nosotros"
+						class:list={{ "is-active": isActivePath("/sobre-nosotros") }}
+						aria-current={isActivePath("/sobre-nosotros") ? "page" : undefined}
+					>
+						Sobre nosotros
+					</a>
+					<a
+						href="/contacto"
+						class:list={{ "is-active": isActivePath("/contacto") }}
+						aria-current={isActivePath("/contacto") ? "page" : undefined}
+					>
+						Contacto
+					</a>
 				</nav>
 			</div>
 		</header>
