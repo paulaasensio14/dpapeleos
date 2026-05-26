@@ -50,32 +50,21 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 24px;
-		padding: 18px 0;
+		padding: 7px 0;
 	}
 
-	.logo {
-		display: inline-flex;
-		align-items: center;
-		gap: 12px;
-		font-weight: 800;
-		color: var(--color-primary);
-	}
+    .logo {
+        display: inline-flex;
+        align-items: center;
+        color: var(--color-primary);
+    }
 
-	.logo-mark {
-		display: grid;
-		place-items: center;
-		width: 44px;
-		height: 44px;
-		border: 2px solid var(--color-secondary);
-		border-radius: 999px;
-		font-size: 18px;
-		letter-spacing: -0.08em;
-	}
-
-	.logo-text {
-		font-size: 18px;
-		letter-spacing: 0.02em;
-	}
+    .logo-image {
+        display: block;
+        width: auto;
+        height: 58px;
+        object-fit: contain;
+    }
 
 	.main-nav {
 		display: flex;
@@ -309,9 +298,9 @@
 			grid-template-columns: 1fr;
 		}
 
-		.logo-text {
-			font-size: 16px;
-		}
+        .logo-image {
+            height: 48px;
+        }
 	}
 
     .site-footer {
