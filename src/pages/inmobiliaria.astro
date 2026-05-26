@@ -30,49 +30,64 @@ import properties from "../data/properties.json";
 				</p>
 			</div>
 
-			<div class="properties-grid">
-				{
-					properties.map((property) => (
-						<article class="property-card">
-							<a href={`/inmobiliaria/${property.slug}`} class="property-image-link">
-								<img
-									src={property.image}
-									alt={`Imagen de ${property.title}`}
-									class="property-image"
-								/>
-							</a>
+			{
+				properties.length > 0 ? (
+					<div class="properties-grid">
+						{properties.map((property) => (
+							<article class="property-card">
+								<a href={`/inmobiliaria/${property.slug}`} class="property-image-link">
+									<img
+										src={property.image}
+										alt={`Imagen de ${property.title}`}
+										class="property-image"
+									/>
+								</a>
 
-							<div class="property-content">
-								<div class="property-tags">
-									<span>{property.operation}</span>
-									<span>{property.propertyType}</span>
+								<div class="property-content">
+									<div class="property-tags">
+										<span>{property.operation}</span>
+										<span>{property.propertyType}</span>
+									</div>
+
+									<h3>
+										<a href={`/inmobiliaria/${property.slug}`}>
+											{property.title}
+										</a>
+									</h3>
+
+									<p class="property-location">{property.location}</p>
+
+									<p class="property-description">{property.description}</p>
+
+									<div class="property-meta">
+										<span>{property.surface}</span>
+										<span>{property.bedrooms} hab.</span>
+										<span>{property.bathrooms} baños</span>
+									</div>
+
+									<div class="property-footer">
+										<strong>{property.price}</strong>
+										<a href={`/inmobiliaria/${property.slug}`}>Ver detalle</a>
+									</div>
 								</div>
-
-								<h3>
-									<a href={`/inmobiliaria/${property.slug}`}>
-										{property.title}
-									</a>
-								</h3>
-
-								<p class="property-location">{property.location}</p>
-
-								<p class="property-description">{property.description}</p>
-
-								<div class="property-meta">
-									<span>{property.surface}</span>
-									<span>{property.bedrooms} hab.</span>
-									<span>{property.bathrooms} baños</span>
-								</div>
-
-								<div class="property-footer">
-									<strong>{property.price}</strong>
-									<a href={`/inmobiliaria/${property.slug}`}>Ver detalle</a>
-								</div>
-							</div>
-						</article>
-					))
-				}
-			</div>
+							</article>
+						))}
+					</div>
+				) : (
+					<div class="empty-state">
+						<p class="eyebrow">Próximamente</p>
+						<h3>No hay inmuebles publicados en este momento.</h3>
+						<p>
+							La asesoría podrá añadir propiedades disponibles más adelante. Si
+							quieres consultar una necesidad concreta, puedes contactar para recibir
+							atención personalizada.
+						</p>
+						<a class="button button-primary" href="/contacto">
+							Solicitar información
+						</a>
+					</div>
+				)
+			}
 		</div>
 	</section>
 
