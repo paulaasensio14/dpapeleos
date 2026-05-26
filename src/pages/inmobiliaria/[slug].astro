@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import properties from "../../data/properties.json";
+
+export function getStaticPaths() {
+	return properties.map((property) => ({
+		params: {
+			slug: property.slug,
+		},
+		props: {
+			property,
+		},
+	}));
+}
+
+const { property } = Astro.props;
+---
+
+<BaseLayout
+	title={`${property.title} | d’Papeleos Asesores`}
+	description={property.description}
+>
+	<section class="property-detail-hero">
+		<div class="container property-detail-grid">
+			<div>
+				<div class="property-tags">
+					<span>{property.operation}</span>
+					<span>{property.propertyType}</span>
+				</div>
+
+				<h1>{property.title}</h1>
+
+				<p class="property-detail-location">{property.location}</p>
+
+				<p class="property-detail-price">{property.price}</p>
+			</div>
+
+			<div class="property-detail-summary">
+				<p class="eyebrow">Datos principales</p>
+
+				<dl>
+					<div>
+						<dt>Superficie</dt>
+						<dd>{property.surface}</dd>
+					</div>
+
+					<div>
+						<dt>Habitaciones</dt>
+						<dd>{property.bedrooms}</dd>
+					</div>
+
+					<div>
+						<dt>Baños</dt>
+						<dd>{property.bathrooms}</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container property-detail-layout">
+			<div>
+				<img
+					src={property.image}
+					alt={`Imagen de ${property.title}`}
+					class="property-detail-image"
+				/>
+
+				<div class="rich-text property-detail-description">
+					<h2>Descripción del inmueble</h2>
+					<p>{property.description}</p>
+				</div>
+
+				<div class="property-features">
+					<h2>Características destacadas</h2>
+
+					<ul>
+						{property.features.map((feature) => <li>{feature}</li>)}
+					</ul>
+				</div>
+			</div>
+
+			<aside class="property-contact-card">
+				<p class="eyebrow">Solicitar información</p>
+
+				<h2>¿Te interesa este inmueble?</h2>
+
+				<p>
+					Contacta con d’Papeleos Asesores para recibir más información o
+					consultar disponibilidad.
+				</p>
+
+				<a class="button button-primary" href={`/contacto?inmueble=${property.slug}`}>
+					Contactar sobre este inmueble
+				</a>
+
+				<p class="property-contact-note">
+					El formulario de contacto se conectará más adelante para incluir este
+					inmueble de forma automática.
+				</p>
+			</aside>
+		</div>
+	</section>
+</BaseLayout>
