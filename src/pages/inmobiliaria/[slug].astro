@@ -44,10 +44,14 @@ const { property } = Astro.props;
 						<dd>{property.surface}</dd>
 					</div>
 
-					<div>
-						<dt>Habitaciones</dt>
-						<dd>{property.bedrooms}</dd>
-					</div>
+					{
+						property.bedrooms > 0 && (
+							<div>
+								<dt>Habitaciones</dt>
+								<dd>{property.bedrooms}</dd>
+							</div>
+						)
+					}
 
 					<div>
 						<dt>Baños</dt>

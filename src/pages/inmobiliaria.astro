@@ -61,7 +61,7 @@ import properties from "../data/properties.json";
 
 									<div class="property-meta">
 										<span>{property.surface}</span>
-										<span>{property.bedrooms} hab.</span>
+										{property.bedrooms > 0 && <span>{property.bedrooms} hab.</span>}
 										<span>{property.bathrooms} baños</span>
 									</div>
 
