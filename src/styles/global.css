@@ -256,6 +256,25 @@
 		color: var(--color-muted);
 	}
 
+	.service-card {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.service-card p {
+		margin-bottom: 22px;
+	}
+
+	.service-card a {
+		margin-top: auto;
+		color: var(--color-secondary);
+		font-weight: 800;
+	}
+
+	.service-card a:hover {
+		color: var(--color-primary);
+	}
+
 	.home-property-highlight {
 		padding-top: 0;
 	}
