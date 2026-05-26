@@ -1,120 +1,86 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="Asesoría profesional para particulares, autónomos y empresas, con servicios de gestión, asesoramiento y compraventa de inmuebles."
-		/>
-		<title>d’Papeleos Asesores | Asesoría profesional e inmobiliaria</title>
-	</head>
+<BaseLayout
+	title="d’Papeleos Asesores | Asesoría profesional e inmobiliaria"
+	description="Asesoría profesional para particulares, autónomos y empresas, con servicios de gestión, asesoramiento y compraventa de inmuebles."
+>
+	<section class="hero">
+		<div class="container hero-grid">
+			<div class="hero-content">
+				<p class="eyebrow">Asesoría fiscal, laboral, contable e inmobiliaria</p>
 
-	<body>
-		<header class="site-header">
-			<div class="container header-content">
-				<a class="logo" href="/" aria-label="d’Papeleos Asesores">
-					<span class="logo-mark">dP</span>
-					<span class="logo-text">d’Papeleos Asesores</span>
-				</a>
+				<h1>Gestión profesional y cercana para tomar mejores decisiones.</h1>
 
-				<nav class="main-nav" aria-label="Navegación principal">
-					<a href="/">Inicio</a>
-					<a href="/servicios">Servicios</a>
-					<a href="/inmobiliaria">Inmobiliaria</a>
-					<a href="/sobre-nosotros">Sobre nosotros</a>
-					<a href="/contacto">Contacto</a>
-				</nav>
+				<p class="hero-text">
+					En d’Papeleos Asesores acompañamos a particulares, autónomos y empresas
+					con un servicio claro, personalizado y orientado a resolver trámites,
+					obligaciones y decisiones importantes con tranquilidad.
+				</p>
+
+				<div class="hero-actions">
+					<a class="button button-primary" href="/contacto">Solicitar asesoramiento</a>
+					<a class="button button-secondary" href="/inmobiliaria">Ver inmuebles</a>
+				</div>
 			</div>
-		</header>
 
-		<main>
-			<section class="hero">
-				<div class="container hero-grid">
-					<div class="hero-content">
-						<p class="eyebrow">Asesoría fiscal, laboral, contable e inmobiliaria</p>
+			<div class="hero-card" aria-label="Resumen de servicios">
+				<h2>Servicios principales</h2>
 
-						<h1>Gestión profesional y cercana para tomar mejores decisiones.</h1>
+				<ul>
+					<li>Asesoría fiscal y contable</li>
+					<li>Gestión laboral y administrativa</li>
+					<li>Atención a autónomos y empresas</li>
+					<li>Compraventa y alquiler de inmuebles</li>
+				</ul>
 
-						<p class="hero-text">
-							En d’Papeleos Asesores acompañamos a particulares, autónomos y empresas
-							con un servicio claro, personalizado y orientado a resolver trámites,
-							obligaciones y decisiones importantes con tranquilidad.
-						</p>
+				<p>Contenido provisional pendiente de validar con el cliente.</p>
+			</div>
+		</div>
+	</section>
 
-						<div class="hero-actions">
-							<a class="button button-primary" href="/contacto">Solicitar asesoramiento</a>
-							<a class="button button-secondary" href="/inmobiliaria">Ver inmuebles</a>
-						</div>
-					</div>
+	<section class="section">
+		<div class="container">
+			<div class="section-heading">
+				<p class="eyebrow">Servicios</p>
+				<h2>Una asesoría pensada para ayudarte en el día a día.</h2>
+				<p>
+					Organizamos la información de forma clara para que cada persona pueda
+					encontrar rápidamente el servicio que necesita.
+				</p>
+			</div>
 
-					<div class="hero-card" aria-label="Resumen de servicios">
-						<h2>Servicios principales</h2>
+			<div class="cards-grid">
+				<article class="card">
+					<h3>Asesoría fiscal</h3>
+					<p>
+						Orientación y gestión de obligaciones fiscales para particulares,
+						autónomos y empresas.
+					</p>
+				</article>
 
-						<ul>
-							<li>Asesoría fiscal y contable</li>
-							<li>Gestión laboral y administrativa</li>
-							<li>Atención a autónomos y empresas</li>
-							<li>Compraventa y alquiler de inmuebles</li>
-						</ul>
+				<article class="card">
+					<h3>Asesoría contable</h3>
+					<p>
+						Apoyo en la organización, revisión y seguimiento de la contabilidad.
+					</p>
+				</article>
 
-						<p>
-							Contenido provisional pendiente de validar con el cliente.
-						</p>
-					</div>
-				</div>
-			</section>
+				<article class="card">
+					<h3>Gestión laboral</h3>
+					<p>
+						Acompañamiento en trámites laborales y gestión administrativa asociada.
+					</p>
+				</article>
 
-			<section class="section">
-				<div class="container">
-					<div class="section-heading">
-						<p class="eyebrow">Servicios</p>
-						<h2>Una asesoría pensada para ayudarte en el día a día.</h2>
-						<p>
-							Organizamos la información de forma clara para que cada persona pueda
-							encontrar rápidamente el servicio que necesita.
-						</p>
-					</div>
-
-					<div class="cards-grid">
-						<article class="card">
-							<h3>Asesoría fiscal</h3>
-							<p>
-								Orientación y gestión de obligaciones fiscales para particulares,
-								autónomos y empresas.
-							</p>
-						</article>
-
-						<article class="card">
-							<h3>Asesoría contable</h3>
-							<p>
-								Apoyo en la organización, revisión y seguimiento de la contabilidad.
-							</p>
-						</article>
-
-						<article class="card">
-							<h3>Gestión laboral</h3>
-							<p>
-								Acompañamiento en trámites laborales y gestión administrativa asociada.
-							</p>
-						</article>
-
-						<article class="card">
-							<h3>Inmobiliaria</h3>
-							<p>
-								Presentación profesional de inmuebles en venta o alquiler con información clara.
-							</p>
-						</article>
-					</div>
-				</div>
-			</section>
-		</main>
-	</body>
-</html>
+				<article class="card">
+					<h3>Inmobiliaria</h3>
+					<p>
+						Presentación profesional de inmuebles en venta o alquiler con información clara.
+					</p>
+				</article>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
