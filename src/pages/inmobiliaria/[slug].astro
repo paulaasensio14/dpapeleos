@@ -54,7 +54,7 @@ const { property } = Astro.props;
 					}
 
 					<div>
-						<dt>Baños</dt>
+						<dt>{property.bathrooms === 1 ? "Baño" : "Baños"}</dt>
 						<dd>{property.bathrooms}</dd>
 					</div>
 				</dl>
