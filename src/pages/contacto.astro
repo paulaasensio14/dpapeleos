@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const propertySlug = Astro.url.searchParams.get("inmueble");
 ---
 
 <BaseLayout
@@ -53,6 +55,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			</div>
 
 			<form class="contact-form" aria-label="Formulario de contacto">
+                {propertySlug && (
+                    <div class="property-form-notice form-field-full">
+                        <p class="eyebrow">Consulta sobre inmueble</p>
+                        <p>
+                            Has llegado desde una ficha de inmueble. Incluiremos esta referencia en
+                            tu consulta para que la asesoría pueda identificarla correctamente.
+                        </p>
+                        <input type="hidden" name="propertySlug" value={propertySlug} />
+                    </div>
+                )}
 				<div class="form-field">
 					<label for="name">Nombre y apellidos *</label>
 					<input
@@ -96,7 +108,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 						<option value="asesoria-contable">Asesoría contable</option>
 						<option value="asesoria-laboral">Asesoría laboral</option>
 						<option value="gestion-administrativa">Gestión administrativa</option>
-						<option value="inmobiliaria">Inmobiliaria</option>
+						<option value="inmobiliaria" selected={Boolean(propertySlug)}>Inmobiliaria</option>
 						<option value="otra-consulta">Otra consulta</option>
 					</select>
 				</div>

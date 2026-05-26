@@ -904,3 +904,19 @@
 		padding: 24px;
 	}
 }
+
+.property-form-notice {
+	padding: 20px;
+	background: var(--color-primary-soft);
+	border: 1px solid rgba(27, 96, 155, 0.22);
+	border-radius: 20px;
+}
+
+.property-form-notice .eyebrow {
+	margin-bottom: 8px;
+}
+
+.property-form-notice p:last-child {
+	margin-bottom: 0;
+	color: var(--color-muted);
+}
