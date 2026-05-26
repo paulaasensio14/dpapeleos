@@ -1,0 +1,44 @@
+[
+	{
+		"title": "Piso luminoso en zona céntrica",
+		"slug": "piso-luminoso-zona-centrica",
+		"location": "Ubicación pendiente de confirmar",
+		"price": "180.000 €",
+		"operation": "Venta",
+		"propertyType": "Piso",
+		"surface": "95 m²",
+		"bedrooms": 3,
+		"bathrooms": 2,
+		"description": "Inmueble amplio y luminoso, situado en una zona bien comunicada. Descripción provisional pendiente de validar con el cliente.",
+		"features": ["Luminoso", "Buena ubicación", "Ascensor"],
+		"image": "/images/property-placeholder.jpg"
+	},
+	{
+		"title": "Local comercial con buena visibilidad",
+		"slug": "local-comercial-buena-visibilidad",
+		"location": "Ubicación pendiente de confirmar",
+		"price": "Consultar",
+		"operation": "Alquiler",
+		"propertyType": "Local",
+		"surface": "120 m²",
+		"bedrooms": 0,
+		"bathrooms": 1,
+		"description": "Local comercial preparado para diferentes tipos de actividad. Información provisional pendiente de validar con el cliente.",
+		"features": ["Escaparate", "Zona transitada", "A pie de calle"],
+		"image": "/images/property-placeholder.jpg"
+	},
+	{
+		"title": "Casa con espacios exteriores",
+		"slug": "casa-con-espacios-exteriores",
+		"location": "Ubicación pendiente de confirmar",
+		"price": "245.000 €",
+		"operation": "Venta",
+		"propertyType": "Casa",
+		"surface": "160 m²",
+		"bedrooms": 4,
+		"bathrooms": 2,
+		"description": "Vivienda con espacios amplios y zona exterior. Datos y descripción pendientes de confirmar con el cliente.",
+		"features": ["Exterior", "Amplia", "Zona tranquila"],
+		"image": "/images/property-placeholder.jpg"
+	}
+]

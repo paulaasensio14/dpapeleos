@@ -1,0 +1,93 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import properties from "../data/properties.json";
+---
+
+<BaseLayout
+	title="Inmobiliaria | d’Papeleos Asesores"
+	description="Inmuebles en venta y alquiler gestionados por d’Papeleos Asesores. Viviendas, locales y propiedades con información clara y atención personalizada."
+>
+	<section class="page-hero">
+		<div class="container page-hero-content">
+			<p class="eyebrow">Inmobiliaria</p>
+			<h1>Inmuebles presentados con claridad y atención profesional.</h1>
+			<p>
+				Consulta una selección de inmuebles disponibles en venta o alquiler. La
+				información mostrada es provisional y deberá validarse con el cliente
+				antes de publicar la web.
+			</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="section-heading">
+				<p class="eyebrow">Inmuebles disponibles</p>
+				<h2>Propiedades destacadas</h2>
+				<p>
+					Cada ficha resume los datos principales del inmueble y prepara la
+					estructura para una futura página de detalle.
+				</p>
+			</div>
+
+			<div class="properties-grid">
+				{
+					properties.map((property) => (
+						<article class="property-card">
+							<a href={`/inmobiliaria/${property.slug}`} class="property-image-link">
+								<img
+									src={property.image}
+									alt={`Imagen de ${property.title}`}
+									class="property-image"
+								/>
+							</a>
+
+							<div class="property-content">
+								<div class="property-tags">
+									<span>{property.operation}</span>
+									<span>{property.propertyType}</span>
+								</div>
+
+								<h3>
+									<a href={`/inmobiliaria/${property.slug}`}>
+										{property.title}
+									</a>
+								</h3>
+
+								<p class="property-location">{property.location}</p>
+
+								<p class="property-description">{property.description}</p>
+
+								<div class="property-meta">
+									<span>{property.surface}</span>
+									<span>{property.bedrooms} hab.</span>
+									<span>{property.bathrooms} baños</span>
+								</div>
+
+								<div class="property-footer">
+									<strong>{property.price}</strong>
+									<a href={`/inmobiliaria/${property.slug}`}>Ver detalle</a>
+								</div>
+							</div>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<section class="cta-section">
+		<div class="container cta-content">
+			<div>
+				<p class="eyebrow">Atención personalizada</p>
+				<h2>¿Te interesa algún inmueble?</h2>
+				<p>
+					Contacta con la asesoría para solicitar más información o resolver
+					cualquier duda sobre una propiedad.
+				</p>
+			</div>
+
+			<a class="button button-primary" href="/contacto">Solicitar información</a>
+		</div>
+	</section>
+</BaseLayout>
