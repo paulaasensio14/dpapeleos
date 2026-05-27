@@ -23,6 +23,12 @@ const { property } = Astro.props;
 	<section class="property-detail-hero">
 		<div class="container property-detail-grid">
 			<div>
+				<nav class="breadcrumb" aria-label="Miga de pan">
+					<a href="/inmobiliaria">Inmobiliaria</a>
+					<span aria-hidden="true">/</span>
+					<span>{property.title}</span>
+				</nav>
+
 				<div class="property-tags">
 					<span>{property.operation}</span>
 					<span>{property.propertyType}</span>

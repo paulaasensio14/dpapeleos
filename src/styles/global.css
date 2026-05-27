@@ -784,6 +784,28 @@
 	padding: 72px 0;
 }
 
+.breadcrumb {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 20px;
+	color: rgba(255, 255, 255, 0.72);
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.breadcrumb a {
+	color: #b9d9f2;
+}
+
+.breadcrumb a:hover {
+	color: var(--color-white);
+}
+
+.breadcrumb span:last-child {
+	color: rgba(255, 255, 255, 0.88);
+}
+
 .property-detail-grid {
 	display: grid;
 	grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
