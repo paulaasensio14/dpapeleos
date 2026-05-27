@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import properties from "../data/properties.json";
 
 const propertySlug = Astro.url.searchParams.get("inmueble");
+const selectedProperty = properties.find((property) => property.slug === propertySlug);
 ---
 
 <BaseLayout
@@ -55,16 +57,33 @@ const propertySlug = Astro.url.searchParams.get("inmueble");
 			</div>
 
 			<form class="contact-form" aria-label="Formulario de contacto">
-                {propertySlug && (
-                    <div class="property-form-notice form-field-full">
-                        <p class="eyebrow">Consulta sobre inmueble</p>
-                        <p>
-                            Has llegado desde una ficha de inmueble. Incluiremos esta referencia en
-                            tu consulta para que la asesoría pueda identificarla correctamente.
-                        </p>
-                        <input type="hidden" name="propertySlug" value={propertySlug} />
-                    </div>
-                )}
+				{propertySlug && (
+					<div class="property-form-notice form-field-full">
+						<p class="eyebrow">Consulta sobre inmueble</p>
+
+						{selectedProperty ? (
+							<p>
+								Has llegado desde la ficha de <strong>{selectedProperty.title}</strong>.
+								Incluiremos esta referencia en tu consulta para que la asesoría pueda
+								identificarla correctamente.
+							</p>
+						) : (
+							<p>
+								Has llegado desde una ficha de inmueble. Incluiremos esta referencia en
+								tu consulta para que la asesoría pueda identificarla correctamente.
+							</p>
+						)}
+
+						<input type="hidden" name="propertySlug" value={propertySlug} />
+						{selectedProperty && (
+							<input
+								type="hidden"
+								name="propertyTitle"
+								value={selectedProperty.title}
+							/>
+						)}
+					</div>
+				)}
 				<div class="form-field">
 					<label for="name">Nombre y apellidos *</label>
 					<input
