@@ -493,12 +493,14 @@
 	gap: 10px;
 }
 
-.footer-nav a {
+.footer-nav a,
+.site-footer p a {
 	color: rgba(255, 255, 255, 0.72);
 	font-weight: 700;
 }
 
 .footer-nav a:hover,
+.site-footer p a:hover,
 .footer-cta:hover {
 	color: var(--color-white);
 }
@@ -1014,6 +1016,15 @@
 .contact-details p {
 	margin-bottom: 0;
 	color: var(--color-muted);
+}
+
+.contact-details a {
+	color: var(--color-secondary);
+	font-weight: 800;
+}
+
+.contact-details a:hover {
+	color: var(--color-primary);
 }
 
 .contact-form {
