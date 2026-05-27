@@ -21,13 +21,21 @@ import properties from "../data/properties.json";
 
 	<section class="section">
 		<div class="container">
-			<div class="section-heading">
+			<div class="section-heading properties-heading">
 				<p class="eyebrow">Inmuebles disponibles</p>
 				<h2>Propiedades destacadas</h2>
 				<p>
 					Cada ficha resume los datos principales del inmueble y prepara la
 					estructura para una futura página de detalle.
 				</p>
+
+				{
+					properties.length > 0 && (
+						<p class="properties-count">
+							{properties.length} {properties.length === 1 ? "inmueble publicado" : "inmuebles publicados"}
+						</p>
+					)
+				}
 			</div>
 
 			{

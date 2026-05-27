@@ -624,6 +624,19 @@
 	}
 }
 
+.properties-count {
+	display: inline-flex;
+	margin: 6px 0 0;
+	padding: 8px 14px;
+	background: var(--color-primary-soft);
+	border: 1px solid rgba(27, 96, 155, 0.18);
+	border-radius: 999px;
+	color: var(--color-secondary);
+	font-size: 14px;
+	font-weight: 800;
+	white-space: nowrap;
+}
+
 .properties-grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
