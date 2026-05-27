@@ -69,6 +69,8 @@ const { property } = Astro.props;
 					src={property.image}
 					alt={`${property.title} en ${property.location}`}
 					class="property-detail-image"
+					loading="lazy"
+					decoding="async"
 				/>
 
 				<div class="rich-text property-detail-description">
