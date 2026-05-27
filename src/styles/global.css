@@ -503,6 +503,10 @@
 	color: var(--color-white);
 }
 
+.footer-contact-note {
+	margin-top: 12px;
+}
+
 .footer-cta {
 	display: inline-block;
 	margin-top: 18px;
