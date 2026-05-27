@@ -1116,6 +1116,10 @@
 	cursor: pointer;
 }
 
+.contact-form .button-primary:disabled {
+	cursor: not-allowed;
+}
+
 @media (max-width: 900px) {
 	.contact-grid {
 		grid-template-columns: 1fr;
