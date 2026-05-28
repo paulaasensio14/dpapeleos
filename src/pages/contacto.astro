@@ -104,6 +104,7 @@ const selectedProperty = properties.find((property) => property.slug === propert
 						type="text"
 						autocomplete="name"
 						required
+						disabled
 						placeholder="Tu nombre"
 					/>
 				</div>
@@ -116,6 +117,7 @@ const selectedProperty = properties.find((property) => property.slug === propert
 						type="email"
 						autocomplete="email"
 						required
+						disabled
 						placeholder="tu@email.com"
 					/>
 				</div>
@@ -127,13 +129,14 @@ const selectedProperty = properties.find((property) => property.slug === propert
 						name="phone"
 						type="tel"
 						autocomplete="tel"
+						disabled
 						placeholder="Tu teléfono"
 					/>
 				</div>
 
 				<div class="form-field">
 					<label for="subject">Tipo de consulta *</label>
-					<select id="subject" name="subject" required>
+					<select id="subject" name="subject" required disabled>
 						<option value="">Selecciona una opción</option>
 						<option value="asesoria-fiscal">Asesoría fiscal</option>
 						<option value="asesoria-contable">Asesoría contable</option>
@@ -153,12 +156,13 @@ const selectedProperty = properties.find((property) => property.slug === propert
 						name="message"
 						rows="6"
 						required
+						disabled
 						placeholder="Cuéntanos brevemente qué necesitas"
 					></textarea>
 				</div>
 
 				<label class="privacy-check form-field-full">
-					<input type="checkbox" name="privacy" required />
+					<input type="checkbox" name="privacy" required disabled />
 					<span>
 						He leído y acepto la política de privacidad. Texto legal pendiente de
 						revisión profesional.
