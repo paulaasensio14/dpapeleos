@@ -62,8 +62,12 @@ const selectedProperty = properties.find((property) => property.slug === propert
 				</div>
 			</div>
 
-			<form class="contact-form" aria-label="Formulario de contacto">
-				<p class="form-note form-field-full">
+			<form
+				class="contact-form"
+				aria-label="Formulario de contacto"
+				aria-describedby="contact-form-status"
+			>
+				<p id="contact-form-status" class="form-note form-field-full">
 					Para contactar ahora, utiliza el teléfono o el email indicados en esta
 					página. El formulario quedará disponible cuando se active la integración.
 				</p>

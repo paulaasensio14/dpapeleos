@@ -1107,10 +1107,15 @@
 	margin-top: 4px;
 }
 
+.privacy-check input:disabled {
+	cursor: not-allowed;
+}
+
 .form-note {
 	margin: 0;
 	color: var(--color-muted);
 	font-size: 14px;
+	line-height: 1.6;
 }
 
 .form-actions {
