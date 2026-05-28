@@ -1076,6 +1076,15 @@
 	background: var(--color-white);
 }
 
+.form-field input:disabled,
+.form-field select:disabled,
+.form-field textarea:disabled {
+	cursor: not-allowed;
+	color: var(--color-muted);
+	background: var(--color-soft);
+	opacity: 0.75;
+}
+
 .form-field textarea {
 	resize: vertical;
 }
