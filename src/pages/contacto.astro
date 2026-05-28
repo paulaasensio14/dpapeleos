@@ -107,7 +107,6 @@ const selectedProperty = properties.find((property) => property.slug === propert
 						name="name"
 						type="text"
 						autocomplete="name"
-						required
 						disabled
 						placeholder="Tu nombre"
 					/>
@@ -120,7 +119,6 @@ const selectedProperty = properties.find((property) => property.slug === propert
 						name="email"
 						type="email"
 						autocomplete="email"
-						required
 						disabled
 						placeholder="tu@email.com"
 					/>
@@ -140,7 +138,7 @@ const selectedProperty = properties.find((property) => property.slug === propert
 
 				<div class="form-field">
 					<label for="subject">Tipo de consulta</label>
-					<select id="subject" name="subject" required disabled>
+					<select id="subject" name="subject" disabled>
 						<option value="">Selecciona una opción</option>
 						<option value="asesoria-fiscal">Asesoría fiscal</option>
 						<option value="asesoria-contable">Asesoría contable</option>
@@ -159,14 +157,13 @@ const selectedProperty = properties.find((property) => property.slug === propert
 						id="message"
 						name="message"
 						rows="6"
-						required
 						disabled
 						placeholder="Formulario pendiente de activar"
 					></textarea>
 				</div>
 
 				<label class="privacy-check form-field-full">
-					<input type="checkbox" name="privacy" required disabled />
+					<input type="checkbox" name="privacy" disabled />
 					<span>
 						Política de privacidad pendiente de revisión profesional antes de
 						activar el formulario.
