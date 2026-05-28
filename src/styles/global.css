@@ -1118,6 +1118,15 @@
 	line-height: 1.6;
 }
 
+.contact-form > .form-note:first-child {
+	border: 1px solid var(--color-border);
+	border-radius: 16px;
+	padding: 14px 16px;
+	background: var(--color-soft);
+	color: var(--color-primary);
+	font-weight: 700;
+}
+
 .form-actions {
 	display: flex;
 	justify-content: flex-start;
