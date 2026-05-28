@@ -13,10 +13,11 @@ const selectedProperty = properties.find((property) => property.slug === propert
 	<section class="page-hero">
 		<div class="container page-hero-content">
 			<p class="eyebrow">Contacto</p>
-			<h1>Cuéntanos qué necesitas y te orientaremos.</h1>
+			<h1>Contacta con la asesoría y te orientaremos.</h1>
 			<p>
-				Contacta con la asesoría para resolver dudas, solicitar información sobre
-				un servicio, gestionar un trámite o consultar un inmueble disponible.
+				Utiliza el teléfono o el email para resolver dudas, solicitar información
+				sobre un servicio, gestionar un trámite o consultar un inmueble
+				disponible.
 			</p>
 		</div>
 	</section>
@@ -74,13 +75,14 @@ const selectedProperty = properties.find((property) => property.slug === propert
 						{selectedProperty ? (
 							<p>
 								Has llegado desde la ficha de <strong>{selectedProperty.title}</strong>.
-								Incluiremos esta referencia en tu consulta para que la asesoría pueda
-								identificarla correctamente.
+								Indica esta referencia al contactar por teléfono o email para que la
+								asesoría pueda identificarla correctamente.
 							</p>
 						) : (
 							<p>
-								Has llegado desde una ficha de inmueble. Incluiremos esta referencia en
-								tu consulta para que la asesoría pueda identificarla correctamente.
+								Has llegado desde una ficha de inmueble. Indica esta referencia al
+								contactar por teléfono o email para que la asesoría pueda identificarla
+								correctamente.
 							</p>
 						)}
 
